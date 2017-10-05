@@ -22,7 +22,7 @@ while nextNothing:
     if regex:
         #print(regex)
         #print(zipfile.ZipFile("channel.zip").getinfo(fileName + ".txt").comment)
-        comments += str(zipfile.ZipFile("channel.zip").getinfo(fileName + ".txt").comment)
+        comments += zipfile.ZipFile("channel.zip").getinfo(fileName + ".txt").comment.decode("utf-8")#bo robiło b'
         fileName=regex.group()
         regex = re.search(pattern1, str(fileName))
         fileName = regex.group()
@@ -30,8 +30,6 @@ while nextNothing:
         nextNothing=False
 
 print(comments)
-#nie działa po mojej myśli
-# ciś z bajtami
 line=''
 for i in range(1,comments.__len__()):
     if(comments[i-1]=='\'' and comments[i+1]=='\''):
