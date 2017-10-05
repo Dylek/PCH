@@ -3,6 +3,8 @@ fileName='2.txt'
 
 f=open(fileName,'r')
 myL= dict()
+print(f.read())
+
 
 for line in f:
     print(line)
