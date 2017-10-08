@@ -3,7 +3,7 @@ import urllib.request as url
 import pickle
 import win32com.client as wincl
 speak = wincl.Dispatch("SAPI.SpVoice")
-speak.Speak("peak hell")
+speak.Speak("PAMIĘTAJ SLowa matki")
 
 #prounace like pickle
 # pickle is module
